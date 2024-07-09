@@ -1,0 +1,5 @@
+../drivers/gpio.c:9:6:GPIO_PinConfig	16	static
+../drivers/gpio.c:17:6:GPIO_SetPin	16	static
+../drivers/gpio.c:20:13:GPIO_ReadPin	24	static
+../drivers/gpio.c:28:6:GPIO_ClearPin	16	static
+../drivers/gpio.c:31:6:GPIO_TogglePin	16	static

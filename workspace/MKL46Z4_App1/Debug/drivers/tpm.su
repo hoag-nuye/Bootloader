@@ -1,0 +1,6 @@
+../drivers/tpm.c:11:13:Channel_Mode_Config	16	static
+../drivers/tpm.c:50:6:TPM_PWM_Config	16	static
+../drivers/tpm.c:57:6:TPM_PWM_Enable	16	static
+../drivers/tpm.c:74:6:TPM_PWM_Disable	16	static
+../drivers/tpm.c:89:6:TPM_PWM_SetMODValue	32	static
+../drivers/tpm.c:97:6:TPM_PWM_SetCOUNTERValue	24	static

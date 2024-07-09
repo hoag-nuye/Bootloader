@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\4.Rhay\0.MCU\1. COde\KL46_Exercise\workspace"/>
+			<item value="D:\4.Rhay\0.MCU\1. COde\KL46_Exercise\workspace\frdmkl46z_gpio_led_output\.settings"/>
+			<item value="C:\Users\Admin\Documents\MCUXpressoIDE_11.9.1_2170\workspace"/>
+			<item value="D:\4.Rhay\0.MCU\1. COde\KL46_Exercise"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item key="OUTSIDE_LOCATION" value="F:\KL46Project"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

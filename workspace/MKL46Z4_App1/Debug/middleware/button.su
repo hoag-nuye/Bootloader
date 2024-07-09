@@ -1,0 +1,5 @@
+../middleware/button.c:17:13:Config_PTC3_Pin	32	static
+../middleware/button.c:43:13:Config_PTC12_Pin	32	static
+../middleware/button.c:69:6:PORTC_PORTD_IRQHandler	8	static
+../middleware/button.c:84:6:BUTTON_Init	16	static
+../middleware/button.c:94:6:Read_BUTTON	16	static

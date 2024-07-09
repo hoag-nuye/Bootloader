@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;MKL46Z4_App2/source/semihost_hardfault.c&apos;" deleteContents="false" description="Delete resource &apos;MKL46Z4_App2/source/semihost_hardfault.c&apos;" element1="/MKL46Z4_App2/source/semihost_hardfault.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1720507286539"/>
+</session>

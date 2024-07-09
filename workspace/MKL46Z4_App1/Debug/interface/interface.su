@@ -1,0 +1,6 @@
+../interface/interface.c:19:13:handleButton	16	static
+../interface/interface.c:71:6:APP_Init	8	static
+../interface/interface.c:79:6:App_Sleep	8	static
+../interface/interface.c:83:6:BUTTON_LED	8	static
+../interface/interface.c:104:6:LIGHTSENSOR_LED	8	static
+../interface/interface.c:135:6:LIGHTSENSOR_USB_COMMS	32	static
