@@ -20,5 +20,8 @@ void UART0_Config(UART0_Config_t* uart0_config);
 void UART0_TRANSMIT_Enable();
 void UART0_TRANSMIT_Disable();
 void UART0_TRANSMIT_Data(char data);
+void UART0_RECEIVER_Enable();
+void UART0_RECEIVER_Disable();
+uint8_t UART0_RECEIVER_Data();
 // Configuration control port
 #endif

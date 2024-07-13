@@ -37,7 +37,7 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 
 # All Target
 all:
-	+@$(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
+	+@$(MAKE) --no-print-directory pre-build && $(MAKE) --no-print-directory main-build && $(MAKE) --no-print-directory post-build
 
 # Main-build Target
 main-build: MKL46Z4_App1.axf
@@ -55,11 +55,16 @@ clean:
 	-$(RM) MKL46Z4_App1.axf
 	-@echo ' '
 
+pre-build:
+	-@echo 'srec-build'
+	-arm-none-eabi-objcopy -O srec example.axf example.bin
+	-@echo ' '
+
 post-build:
 	-@echo 'Performing post-build steps'
 	-arm-none-eabi-size "MKL46Z4_App1.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_App1.axf" "MKL46Z4_App1.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_App1.bin";
 	-@echo ' '
 
-.PHONY: all clean dependents main-build post-build
+.PHONY: all clean dependents main-build pre-build post-build
 
 -include ../makefile.targets

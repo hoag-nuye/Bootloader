@@ -10,8 +10,9 @@
 //Define value of fields
 typedef enum
 {
-	IR_PORTCD = 31,
-	IR_ADC0 = 15
+	IR_PORTCD = 31U,
+	IR_ADC0 = 15U,
+	IR_UART0 = 12U
 }IRQn_t;
 
 //------------- Struct -----------//

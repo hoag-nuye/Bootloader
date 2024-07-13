@@ -6,7 +6,7 @@
 #define __CLOCK_H_
 
 #define CLK_TPM0_IR 1000000U
-#define CLK_UART0_IR 1000000U
+#define CLK_UART0_IR 4000000U
 //------------- Enum -----------//
 //Define value of fields
 

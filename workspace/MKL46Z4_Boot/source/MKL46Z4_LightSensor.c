@@ -6,11 +6,12 @@
  */
 
 /**
- * @file    MKL46Z4_Bootloader.c
+ * @file    MKL46Z4_LightSensor.c
  * @brief   Application entry point.
  */
 #include <stdio.h>
 #include "MKL46Z4.h"
+#include "interface.h"
 /* TODO: insert other include files here. */
 
 /* TODO: insert other definitions and declarations here. */
@@ -18,7 +19,7 @@
 /*
  * @brief   Application entry point.
  */
-void main(void) {
 
-
+void main() {
+	Bootloader_Init();
 }

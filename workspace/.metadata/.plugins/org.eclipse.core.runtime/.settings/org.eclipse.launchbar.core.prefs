@@ -1,7 +1,7 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:frdmkl46z_gpio_led_output.axf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKL46Z4_LightSensor JLink Debug
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:frdmkl46z_gpio_led_output.axf,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKL46Z4_LightSensor JLink Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKL46Z4_Boot JLink Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKL46Z4_LightSensor\ JLink\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:MKL46Z4_LightSensor\ JLink\ Debug/activeLaunchTarget=null\:---

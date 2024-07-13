@@ -10,6 +10,9 @@ RM := rm -rf
 -include sources.mk
 -include startup/subdir.mk
 -include source/subdir.mk
+-include middleware/subdir.mk
+-include interface/subdir.mk
+-include drivers/subdir.mk
 -include CMSIS/subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C_DEPS)),)

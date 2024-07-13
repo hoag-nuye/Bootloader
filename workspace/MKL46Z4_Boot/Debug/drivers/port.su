@@ -1,0 +1,4 @@
+../drivers/port.c:11:6:PORT_PinConfig	16	static
+../drivers/port.c:17:6:PORT_EXTI_Config	24	static
+../drivers/port.c:34:6:PORT_EXTI_ClearFlag	16	static
+../drivers/port.c:39:23:PORT_Interrupt	24	static

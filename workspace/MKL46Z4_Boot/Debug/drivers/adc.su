@@ -1,0 +1,2 @@
+../drivers/adc.c:9:6:ADC_Config	16	static
+../drivers/adc.c:39:6:ADC_Softwarwe_Start	16	static

@@ -1,0 +1,2 @@
+../interface/interface.c:16:6:UART0_IRQHandler	16	static
+../interface/interface.c:27:6:Bootloader_Init	16	static

@@ -1,1 +1,6 @@
 1720507286539	Delete resource 'MKL46Z4_App2/source/semihost_hardfault.c'
+1720774362462	Delete resource 'MKL46Z4_Boot'
+1720774972686	Delete resource 'MKL46Z4_Boot/CMSIS'
+1720853281769	Delete resource 'MKL46Z4_App1/Debug/MKL46Z4_App1.hex'
+1720853286893	Delete resource 'MKL46Z4_App1/Debug/MKL46Z4_App1.s19'
+1720861162518	Delete resource 'MKL46Z4_App1/Debug/MKL46Z4_App1.s19'

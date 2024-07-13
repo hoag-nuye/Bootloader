@@ -1,35 +1,36 @@
-13:44:34 **** Build of configuration Debug for project MKL46Z4_Boot ****
+16:01:37 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
-Building file: ../startup/startup_mkl46z4.c
-Building file: ../source/MKL46Z4_Bootloader.c
-Building file: ../source/mtb.c
+Building file: ../interface/interface.c
 Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interfaces" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middlewares" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_mkl46z4.d" -MT"startup/startup_mkl46z4.o" -MT"startup/startup_mkl46z4.d" -o "startup/startup_mkl46z4.o" "../startup/startup_mkl46z4.c"
-Building file: ../CMSIS/system_MKL46Z4.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interfaces" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middlewares" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/MKL46Z4_Bootloader.d" -MT"source/MKL46Z4_Bootloader.o" -MT"source/MKL46Z4_Bootloader.d" -o "source/MKL46Z4_Bootloader.o" "../source/MKL46Z4_Bootloader.c"
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interfaces" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middlewares" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/mtb.d" -MT"source/mtb.o" -MT"source/mtb.d" -o "source/mtb.o" "../source/mtb.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interfaces" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middlewares" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../CMSIS/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"CMSIS/system_MKL46Z4.d" -MT"CMSIS/system_MKL46Z4.o" -MT"CMSIS/system_MKL46Z4.d" -o "CMSIS/system_MKL46Z4.o" "../CMSIS/system_MKL46Z4.c"
-Finished building: ../source/mtb.c
- 
-Finished building: ../startup/startup_mkl46z4.c
- 
-Finished building: ../CMSIS/system_MKL46Z4.c
-Finished building: ../source/MKL46Z4_Bootloader.c
- 
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../interface/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"interface/interface.d" -MT"interface/interface.o" -MT"interface/interface.d" -o "interface/interface.o" "../interface/interface.c"
+Finished building: ../interface/interface.c
  
 Building target: MKL46Z4_Boot.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./startup/startup_mkl46z4.o  ./source/MKL46Z4_Bootloader.o ./source/mtb.o  ./CMSIS/system_MKL46Z4.o   
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:        2468 B       256 KB      0.94%
-            SRAM:        4408 B        32 KB     13.45%
+   PROGRAM_FLASH:        4108 B       256 KB      1.57%
+            SRAM:        4792 B        32 KB     14.62%
 Finished building target: MKL46Z4_Boot.axf
  
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   2468	      0	   4408	   6876	   1adc	MKL46Z4_Boot.axf
+   4108	      0	   4792	   8900	   22c4	MKL46Z4_Boot.axf
+ 
+16:01:46 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4108	      0	   4792	   8900	   22c4	MKL46Z4_Boot.axf
+ 
+16:01:47 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4108	      0	   4792	   8900	   22c4	MKL46Z4_Boot.axf
  

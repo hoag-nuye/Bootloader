@@ -10,7 +10,7 @@ static void Config_USB_UART0(){
 	Clock_Enable(CLK_UART0_MCGIRCLK);
 	UART0_Config_t uart0Config = {
 			.baudrate = 9600,
-			.samplingRatio = 4,
+			.samplingRatio = 16,
 	};
 	UART0_Config(&uart0Config);
 };

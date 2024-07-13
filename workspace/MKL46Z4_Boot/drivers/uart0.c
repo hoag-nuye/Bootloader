@@ -1,8 +1,7 @@
 //================ INCLUDE ================/
 #include "uart0.h"
-#include "MKL46Z4.h"
 #include "clock.h"
-#include "port.h"
+#include "MKL46Z4.h"
 //================ DEFINED ================/
 //Get Clock From IR Clock
 
@@ -26,27 +25,6 @@ void UART0_Config(UART0_Config_t* uart0_config){
 	UART0->BDL &= ~UART0_BDL_SBR_MASK;
 	UART0->BDL |= UART0_BDL_SBR(brDivLow);
 
-	//CONFIG USB PIN TO PTA1 - PTA2
-	//Enable clock PORTA
-	Clock_Enable(CLK_PORTA);
-	/*PTA1 */
-	PORT_Config_Type portConfig_PTA1 = {
-			.port = PORTA,
-			.pin = 1,
-			.mux = Alt2,
-			.pull = Pull_UP,
-	};
-	PORT_PinConfig(&portConfig_PTA1);
-
-	/*PTA2 */
-	PORT_Config_Type portConfig_PTA2 = {
-				.port = PORTA,
-				.pin = 2,
-				.mux = Alt2,
-				.pull = Pull_UP,
-		};
-		PORT_PinConfig(&portConfig_PTA2);
-
 
 };
 void UART0_TRANSMIT_Enable(){;
@@ -64,4 +42,20 @@ void UART0_TRANSMIT_Data(char data){
 	while(!((UART0->S1 & UART0_S1_TDRE_MASK)>>UART0_S1_TDRE_SHIFT)){}
 
 	UART0->D = data;
+};
+
+void UART0_RECEIVER_Enable(){
+	UART0->C2 &= ~UART0_C2_RE_MASK;
+	UART0->C2 |= UART_C2_RE(1U);
+	//Enable interrupt
+	UART0->C2 &= ~UART0_C2_RIE_MASK;
+	UART0->C2 |= UART_C2_RIE(1U);
+};
+void UART0_RECEIVER_Disable(){
+	UART0->C2 &= ~UART0_C2_RE_MASK;
+	UART0->C2 &= ~UART0_C2_RIE_MASK;
+};
+uint8_t UART0_RECEIVER_Data(){
+	while (((UART0->S1 & UART0_S1_RDRF_MASK)==0));
+	return UART0->D;
 };
