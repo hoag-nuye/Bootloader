@@ -1,4 +1,171 @@
-16:40:30 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+23:11:50 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/updateflash.c
+Building file: ../interface/interface.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../interface/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"interface/interface.d" -MT"interface/interface.o" -MT"interface/interface.d" -o "interface/interface.o" "../interface/interface.c"
+../middleware/updateflash.c: In function 'FLASH_TransmitALineSrec':
+../middleware/updateflash.c:38:21: warning: variable 'srecStatus' set but not used [-Wunused-but-set-variable]
+   38 |         SREC_API_t *srecStatus;
+      |                     ^~~~~~~~~~
+../middleware/updateflash.c: At top level:
+../middleware/updateflash.c:15:20: warning: 'dataSREC' defined but not used [-Wunused-variable]
+   15 | static SREC_API_t *dataSREC;
+      |                    ^~~~~~~~
+../interface/interface.c: In function 'Bootloader_Init':
+../interface/interface.c:17:9: warning: implicit declaration of function 'FLASH_TransmitALineSrec'; did you mean 'FLASH_TransmitTEST'? [-Wimplicit-function-declaration]
+   17 |         FLASH_TransmitALineSrec();
+      |         ^~~~~~~~~~~~~~~~~~~~~~~
+      |         FLASH_TransmitTEST
+Finished building: ../middleware/updateflash.c
+Finished building: ../interface/interface.c
+ 
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       10352 B       256 KB      3.95%
+            SRAM:        4628 B        32 KB     14.12%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10352	      0	   4628	  14980	   3a84	MKL46Z4_Boot.axf
+ 
+23:11:53 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10352	      0	   4628	  14980	   3a84	MKL46Z4_Boot.axf
+ 
+23:11:53 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10352	      0	   4628	  14980	   3a84	MKL46Z4_Boot.axf
+ 
+23:13:11 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/updateflash.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+../middleware/updateflash.c: In function 'FLASH_TransmitALineSrec':
+../middleware/updateflash.c:38:21: warning: variable 'srecStatus' set but not used [-Wunused-but-set-variable]
+   38 |         SREC_API_t *srecStatus;
+      |                     ^~~~~~~~~~
+../middleware/updateflash.c: At top level:
+../middleware/updateflash.c:15:20: warning: 'dataSREC' defined but not used [-Wunused-variable]
+   15 | static SREC_API_t *dataSREC;
+      |                    ^~~~~~~~
+Finished building: ../middleware/updateflash.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       10352 B       256 KB      3.95%
+            SRAM:        4628 B        32 KB     14.12%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10352	      0	   4628	  14980	   3a84	MKL46Z4_Boot.axf
+ 
+23:13:12 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+  10352	      0	   4628	  14980	   3a84	MKL46Z4_Boot.axf
+ 
+23:14:10 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/updateflash.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+../middleware/updateflash.c: In function 'FLASH_TransmitALineSrec':
+../middleware/updateflash.c:38:21: warning: unused variable 'srecStatus' [-Wunused-variable]
+   38 |         SREC_API_t *srecStatus;
+      |                     ^~~~~~~~~~
+../middleware/updateflash.c: At top level:
+../middleware/updateflash.c:15:20: warning: 'dataSREC' defined but not used [-Wunused-variable]
+   15 | static SREC_API_t *dataSREC;
+      |                    ^~~~~~~~
+Finished building: ../middleware/updateflash.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        4768 B       256 KB      1.82%
+            SRAM:        4528 B        32 KB     13.82%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4768	      0	   4528	   9296	   2450	MKL46Z4_Boot.axf
+ 
+23:14:11 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4768	      0	   4528	   9296	   2450	MKL46Z4_Boot.axf
+ 
+23:29:06 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../supports/queue.c
+Building file: ../middleware/updateflash.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../supports/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"supports/queue.d" -MT"supports/queue.o" -MT"supports/queue.d" -o "supports/queue.o" "../supports/queue.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+../middleware/updateflash.c: In function 'FLASH_TransmitALineSrec':
+../middleware/updateflash.c:38:21: warning: unused variable 'srecStatus' [-Wunused-variable]
+   38 |         SREC_API_t *srecStatus;
+      |                     ^~~~~~~~~~
+../middleware/updateflash.c: At top level:
+../middleware/updateflash.c:15:20: warning: 'dataSREC' defined but not used [-Wunused-variable]
+   15 | static SREC_API_t *dataSREC;
+      |                    ^~~~~~~~
+Finished building: ../middleware/updateflash.c
+Finished building: ../supports/queue.c
+ 
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        4796 B       256 KB      1.83%
+            SRAM:        4528 B        32 KB     13.82%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4796	      0	   4528	   9324	   246c	MKL46Z4_Boot.axf
+ 
+23:29:07 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4796	      0	   4528	   9324	   246c	MKL46Z4_Boot.axf
+ 
+23:35:42 **** Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 Building file: ../supports/queue.c
 Invoking: MCU C Compiler
@@ -7,34 +174,26 @@ Finished building: ../supports/queue.c
  
 Building target: MKL46Z4_Boot.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:        4712 B       256 KB      1.80%
-            SRAM:        4564 B        32 KB     13.93%
+   PROGRAM_FLASH:        4792 B       256 KB      1.83%
+            SRAM:        4528 B        32 KB     13.82%
 Finished building target: MKL46Z4_Boot.axf
  
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4712	      0	   4564	   9276	   243c	MKL46Z4_Boot.axf
+   4792	      0	   4528	   9320	   2468	MKL46Z4_Boot.axf
  
-16:40:35 **** Build of configuration Debug for project MKL46Z4_Boot ****
+23:35:43 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4712	      0	   4564	   9276	   243c	MKL46Z4_Boot.axf
+   4792	      0	   4528	   9320	   2468	MKL46Z4_Boot.axf
  
-16:40:35 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
-make -r -j8 all 
-make[1]: Nothing to be done for 'main-build'.
-Performing post-build steps
-arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4712	      0	   4564	   9276	   243c	MKL46Z4_Boot.axf
- 
-16:42:43 **** Build of configuration Debug for project MKL46Z4_Boot ****
+23:42:55 **** Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 Building file: ../supports/queue.c
 Invoking: MCU C Compiler
@@ -43,26 +202,26 @@ Finished building: ../supports/queue.c
  
 Building target: MKL46Z4_Boot.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:        4712 B       256 KB      1.80%
-            SRAM:        4564 B        32 KB     13.93%
+   PROGRAM_FLASH:        4796 B       256 KB      1.83%
+            SRAM:        4528 B        32 KB     13.82%
 Finished building target: MKL46Z4_Boot.axf
  
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4712	      0	   4564	   9276	   243c	MKL46Z4_Boot.axf
+   4796	      0	   4528	   9324	   246c	MKL46Z4_Boot.axf
  
-16:42:44 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+23:42:56 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4712	      0	   4564	   9276	   243c	MKL46Z4_Boot.axf
+   4796	      0	   4528	   9324	   246c	MKL46Z4_Boot.axf
  
-16:44:06 **** Build of configuration Debug for project MKL46Z4_Boot ****
+23:48:52 **** Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 Building file: ../supports/queue.c
 Invoking: MCU C Compiler
@@ -71,78 +230,163 @@ Finished building: ../supports/queue.c
  
 Building target: MKL46Z4_Boot.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:        4712 B       256 KB      1.80%
-            SRAM:        4564 B        32 KB     13.93%
+   PROGRAM_FLASH:        4836 B       256 KB      1.84%
+            SRAM:        4528 B        32 KB     13.82%
 Finished building target: MKL46Z4_Boot.axf
  
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4712	      0	   4564	   9276	   243c	MKL46Z4_Boot.axf
+   4836	      0	   4528	   9364	   2494	MKL46Z4_Boot.axf
  
-16:44:07 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+23:48:53 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4712	      0	   4564	   9276	   243c	MKL46Z4_Boot.axf
+   4836	      0	   4528	   9364	   2494	MKL46Z4_Boot.axf
  
-16:48:32 **** Build of configuration Debug for project MKL46Z4_Boot ****
+23:54:00 **** Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
-Building file: ../supports/queue.c
+Building file: ../middleware/updateflash.c
 Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../supports/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"supports/queue.d" -MT"supports/queue.o" -MT"supports/queue.d" -o "supports/queue.o" "../supports/queue.c"
-Finished building: ../supports/queue.c
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+../middleware/updateflash.c: In function 'FLASH_TransmitALineSrec':
+../middleware/updateflash.c:38:21: warning: unused variable 'srecStatus' [-Wunused-variable]
+   38 |         SREC_API_t *srecStatus;
+      |                     ^~~~~~~~~~
+../middleware/updateflash.c: At top level:
+../middleware/updateflash.c:15:20: warning: 'dataSREC' defined but not used [-Wunused-variable]
+   15 | static SREC_API_t *dataSREC;
+      |                    ^~~~~~~~
+Finished building: ../middleware/updateflash.c
  
 Building target: MKL46Z4_Boot.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:        4696 B       256 KB      1.79%
-            SRAM:        4560 B        32 KB     13.92%
+   PROGRAM_FLASH:        4836 B       256 KB      1.84%
+            SRAM:        4528 B        32 KB     13.82%
 Finished building target: MKL46Z4_Boot.axf
  
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4696	      0	   4560	   9256	   2428	MKL46Z4_Boot.axf
+   4836	      0	   4528	   9364	   2494	MKL46Z4_Boot.axf
  
-16:48:33 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+23:54:01 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4696	      0	   4560	   9256	   2428	MKL46Z4_Boot.axf
+   4836	      0	   4528	   9364	   2494	MKL46Z4_Boot.axf
  
-17:01:43 **** Build of configuration Debug for project MKL46Z4_Boot ****
+23:58:36 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4836	      0	   4528	   9364	   2494	MKL46Z4_Boot.axf
+ 
+23:58:37 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4836	      0	   4528	   9364	   2494	MKL46Z4_Boot.axf
+ 
+23:59:22 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4836	      0	   4528	   9364	   2494	MKL46Z4_Boot.axf
+ 
+23:59:23 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4836	      0	   4528	   9364	   2494	MKL46Z4_Boot.axf
+ 
+00:05:04 **** Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 Building file: ../middleware/usb.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c: In function 'UART0_IRQHandler':
+../middleware/usb.c:19:47: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+   19 |         if((lineSrecData[numberChar] == '\n') && (lineSrecData[numberChar-1] == '\r') || (UART0->S1 & UART0_S1_IDLE_MASK)){
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Finished building: ../middleware/usb.c
  
 Building target: MKL46Z4_Boot.axf
 Invoking: MCU Linker
-arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:        4736 B       256 KB      1.81%
-            SRAM:        4560 B        32 KB     13.92%
+   PROGRAM_FLASH:        4852 B       256 KB      1.85%
+            SRAM:        4528 B        32 KB     13.82%
 Finished building target: MKL46Z4_Boot.axf
  
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4736	      0	   4560	   9296	   2450	MKL46Z4_Boot.axf
+   4852	      0	   4528	   9380	   24a4	MKL46Z4_Boot.axf
  
-17:01:44 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+00:05:05 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4736	      0	   4560	   9296	   2450	MKL46Z4_Boot.axf
+   4852	      0	   4528	   9380	   24a4	MKL46Z4_Boot.axf
+ 
+00:13:35 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/updateflash.c
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/updateflash.c: In function 'FLASH_TransmitALineSrec':
+../middleware/updateflash.c:38:21: warning: unused variable 'srecStatus' [-Wunused-variable]
+   38 |         SREC_API_t *srecStatus;
+      |                     ^~~~~~~~~~
+../middleware/updateflash.c: At top level:
+../middleware/updateflash.c:15:20: warning: 'dataSREC' defined but not used [-Wunused-variable]
+   15 | static SREC_API_t *dataSREC;
+      |                    ^~~~~~~~
+Finished building: ../middleware/usb.c
+Finished building: ../middleware/updateflash.c
+ 
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        4808 B       256 KB      1.83%
+            SRAM:        4528 B        32 KB     13.82%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4808	      0	   4528	   9336	   2478	MKL46Z4_Boot.axf
+ 
+00:13:36 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   4808	      0	   4528	   9336	   2478	MKL46Z4_Boot.axf
  

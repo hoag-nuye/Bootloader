@@ -1,5 +1,4 @@
 #include <stdint.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <supports/queue.h>
 //================ DEFINED ================/
@@ -7,7 +6,7 @@
 static node_t *HEAD = NULL;
 static uint8_t SIZE_DATA = 0;
 static node_t *preNode;
-static uint8_t isHEAD = 0;
+static uint8_t nodeNum = 0;
 //------------- Struct -----------//
 
 //------------- Enum -----------//
@@ -21,9 +20,19 @@ static void copy_data(uint8_t *dest, uint8_t *src){
 	}
 }
 
+//FREE HEEP
+static void QUEUE_Free(){
+	while(HEAD != NULL){
+		preNode = HEAD;
+		HEAD = preNode->pNext;
+		free(preNode);
+	}
+}
 //================ FOCUSED ================/
 void QUEUE_Init(uint8_t sizeofData){
+	QUEUE_Free();
 	SIZE_DATA = sizeofData;
+	nodeNum = 0;
 }
 
 //Push data into queue
@@ -34,33 +43,33 @@ void QUEUE_Push(void *data){
 	ptr->pNext = NULL;
 	if(HEAD == NULL){
 		HEAD = ptr;
+		nodeNum++;
 	}else{
 		node_t *preNode = HEAD;
 		while(preNode->pNext != NULL){
 			preNode = preNode->pNext;
 		}
 		preNode->pNext = ptr;
+		nodeNum++;
 	}
+
 }
 
 //Pop data out queue
 uint8_t *QUEUE_Pop(){
 	uint8_t *pData;
-	if(isHEAD ==0){
-		preNode = HEAD;
-		pData = (uint8_t *)preNode->data;
-		preNode = preNode->pNext;
-		isHEAD = 1;
+	if(HEAD == NULL){
+		pData = NULL;
 	}else{
-		if(preNode == NULL){
-			pData = NULL;
-		}
-		else{
-			pData = (uint8_t *)preNode->data;
-			preNode = preNode->pNext;
-		}
+		preNode = HEAD;
+		pData = preNode->data;
+		HEAD = preNode->pNext;
+		free(preNode);
 	}
 	return (uint8_t *)pData;
 }
+
+
+
 
 
