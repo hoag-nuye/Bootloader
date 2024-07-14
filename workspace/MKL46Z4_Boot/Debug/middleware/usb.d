@@ -9,7 +9,8 @@ middleware/usb.o middleware/usb.d: ../middleware/usb.c \
  F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/port.h \
  F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/nvic.h \
  F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/uart0.h \
- F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/clock.h
+ F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/clock.h \
+ F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports/queue.h
 ../middleware/usb.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS/MKL46Z4.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS/core_cm0plus.h:
@@ -21,3 +22,4 @@ F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/port.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/nvic.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/uart0.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/clock.h:
+F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports/queue.h:

@@ -20,4 +20,5 @@ interface \
 middleware \
 source \
 startup \
+supports \
 

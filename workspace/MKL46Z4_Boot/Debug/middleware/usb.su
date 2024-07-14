@@ -1,1 +1,3 @@
-../middleware/usb.c:14:6:USB_Init	40	static
+../middleware/usb.c:15:6:UART0_IRQHandler	16	static
+../middleware/usb.c:27:6:USB_Init	40	static
+../middleware/usb.c:62:6:USB_TransmitTEST	16	static
