@@ -37,7 +37,7 @@ uint8_t chtoHex(char ch){
 }
 
 //strtoHex: Convert string to hex
-SREC_Status_t strtoHex(uint8_t *str, uint8_t len, uint8_t *decimal){
+SREC_Status_t strtoHex(uint8_t *str, uint8_t len, uint32_t *decimal){
 	SREC_Status_t status = SREC_TRUE;
 	*decimal = 0;
 	uint8_t idx;
@@ -122,6 +122,7 @@ SREC_API_t *SREC_ApiGetData(uint8_t *srecLineData, uint8_t sizeData, uint8_t chr
 	SREC_Status_t status = SREC_TRUE;
 	uint8_t AddressNum = 0;
 	uint8_t DataNum = 0;
+	uint32_t resultConvert;
 
 	switch(state){
 		case STATE_NOT_EXIST_FILE:
@@ -137,8 +138,8 @@ SREC_API_t *SREC_ApiGetData(uint8_t *srecLineData, uint8_t sizeData, uint8_t chr
 			}
 		//2. Read Record type field
 		case STATE_READ_TYPE:
-
-			status = strtoHex(&srecLineData[1], 1, (uint8_t *)&(dataSrec.type));
+			status = strtoHex(&srecLineData[1], 1, (uint32_t *)&resultConvert);
+			dataSrec.type = (uint8_t)resultConvert;
 			uint8_t condit_T = dataSrec.type >= 0 && dataSrec.type <= 9 && dataSrec.type != 4;
 			if(!condit_T || status == SREC_ERR_SYNTAX){
 				status = SREC_ERR_TYPE;
@@ -146,9 +147,11 @@ SREC_API_t *SREC_ApiGetData(uint8_t *srecLineData, uint8_t sizeData, uint8_t chr
 			}
 			// caculate address num
 			AddressNum = GetAddressNum(dataSrec.type);
+			apiResult.srec_addr_len = AddressNum/2;
 		//3. Read Byte count field
 		case STATE_READ_COUNT:
-			status = strtoHex(&srecLineData[2], 2, (uint8_t *)&(dataSrec.count));
+			status = strtoHex(&srecLineData[2], 2, (uint32_t *)&resultConvert);
+			dataSrec.count = (uint8_t)resultConvert;
 			uint8_t condit_C = dataSrec.count >= 0x03 && dataSrec.type <= 0xFF;
 			if(!condit_C || status == SREC_ERR_SYNTAX){
 				status = SREC_ERR_COUNT;
@@ -156,9 +159,10 @@ SREC_API_t *SREC_ApiGetData(uint8_t *srecLineData, uint8_t sizeData, uint8_t chr
 			}
 			// caculate data num
 			DataNum = dataSrec.count*2 - AddressNum - 2;
+			apiResult.srec_data_len = DataNum/2;
 		//3. Read Address field
 		case STATE_READ_ADDRESS:
-			status = strtoHex(&srecLineData[4], AddressNum, (uint8_t *)&(dataSrec.address));
+			status = strtoHex(&srecLineData[4], AddressNum, (uint32_t *)&(dataSrec.address));
 			apiResult.srec_addr = dataSrec.address;
 			if(status != SREC_TRUE || status == SREC_ERR_SYNTAX){
 				status = SREC_ERR_ADDRESS;
@@ -168,7 +172,8 @@ SREC_API_t *SREC_ApiGetData(uint8_t *srecLineData, uint8_t sizeData, uint8_t chr
 		uint8_t idx;
 		case STATE_READ_DATA:
 			for(idx = 0; idx < SREC_DATA_LEN_MAX/2 ; idx++){
-				status = strtoHex(&srecLineData[4+AddressNum+idx*2], 2, (uint8_t *)&(dataSrec.data[idx]));
+				status = strtoHex(&srecLineData[4+AddressNum+idx*2], 2, (uint32_t *)&resultConvert);
+				dataSrec.data[idx] = (uint8_t )resultConvert;
 				apiResult.srec_data[idx] = dataSrec.data[idx];
 			}
 			if(status != SREC_TRUE || status == SREC_ERR_SYNTAX){
@@ -177,13 +182,17 @@ SREC_API_t *SREC_ApiGetData(uint8_t *srecLineData, uint8_t sizeData, uint8_t chr
 			}
 		//5. Read Checksum field
 		case STATE_READ_CHECKSUM:
-			status = strtoHex(&srecLineData[4+ AddressNum + DataNum], 2, (uint8_t *)&(dataSrec.checkSum));
+			status = strtoHex(&srecLineData[4+ AddressNum + DataNum], 2, (uint32_t *)&resultConvert);
+			dataSrec.checkSum = (uint8_t)resultConvert;
 			uint8_t condit_S = (caculateSum(AddressNum, DataNum) | dataSrec.checkSum) == 0xFF;
 			if(!condit_S || status == SREC_ERR_SYNTAX){
 				status = SREC_ERR_CHECKSUM;
 				break;
 		}
 	}
+	if(!((srecLineData[1] == '1') || (srecLineData[1] == '2') || (srecLineData[1] == '3'))){
+		status = SREC_IGNORE_DATA;
+		}
 	apiResult.status = status;
 	return &apiResult;
 }

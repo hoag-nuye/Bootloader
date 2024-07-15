@@ -1,11 +1,11 @@
-00:13:36 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+19:03:42 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4808	      0	   4528	   9336	   2478	MKL46Z4_Boot.axf
+  10752	      0	   4636	  15388	   3c1c	MKL46Z4_Boot.axf
  
 
-00:13:36 Build Finished. 0 errors, 0 warnings. (took 193ms)
+19:03:42 Build Finished. 0 errors, 0 warnings. (took 191ms)
 

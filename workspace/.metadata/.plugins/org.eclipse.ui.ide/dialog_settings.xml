@@ -6,6 +6,10 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_flash"/>
+			<item value="F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_flash_flash (2)\.settings"/>
+			<item value="F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_flash_flash (2)"/>
+			<item value="F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_flash_flash"/>
 			<item value="D:\4.Rhay\0.MCU\1. COde\KL46_Exercise\workspace"/>
 			<item value="D:\4.Rhay\0.MCU\1. COde\KL46_Exercise\workspace\frdmkl46z_gpio_led_output\.settings"/>
 			<item value="C:\Users\Admin\Documents\MCUXpressoIDE_11.9.1_2170\workspace"/>

@@ -1,0 +1,2 @@
+../drivers/ftfa.c:10:6:FTFA_ProgramWord	24	static
+../drivers/ftfa.c:58:6:FTFA_EraseSector	16	static

@@ -3,13 +3,34 @@
  * Copyright 2008-2013 Code Red Technologies Ltd,
  * Copyright 2013-2024 NXP
  * Generated linker script file for MKL46Z256xxx4
- * Created from linkscript.ldt by FMCreateLinkLibraries
+ * Created from library.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.30
- * MCUXpresso IDE v11.9.1 [Build 2170] [2024-04-19] on Jul 15, 2024, 7:03:42 PM
+ * MCUXpresso IDE v11.9.1 [Build 2170] [2024-04-19] on Jul 13, 2024, 3:59:13 PM
  */
 
-INCLUDE "MKL46Z4_Boot_Debug_library.ld"
-INCLUDE "MKL46Z4_Boot_Debug_memory.ld"
+GROUP (
+  "libcr_nohost_nf.a"
+  "libcr_c.a"
+  "libcr_eabihelpers.a"
+  "libgcc.a"
+)
+MEMORY
+{
+  /* Define each memory region */
+  PROGRAM_FLASH (rx) : ORIGIN = 0x10000, LENGTH = 0x30000 /* 256K bytes (alias Flash) */  
+  SRAM (rwx) : ORIGIN = 0x1fffe000, LENGTH = 0x8000 /* 32K bytes (alias RAM) */  
+}
+
+  /* Define a symbol for the top of each memory region */
+  __base_PROGRAM_FLASH = 0x0  ; /* PROGRAM_FLASH */  
+  __base_Flash = 0x0 ; /* Flash */  
+  __top_PROGRAM_FLASH = 0x0 + 0x40000 ; /* 256K bytes */  
+  __top_Flash = 0x0 + 0x40000 ; /* 256K bytes */  
+  __base_SRAM = 0x1fffe000  ; /* SRAM */  
+  __base_RAM = 0x1fffe000 ; /* RAM */  
+  __top_SRAM = 0x1fffe000 + 0x8000 ; /* 32K bytes */  
+  __top_RAM = 0x1fffe000 + 0x8000 ; /* 32K bytes */  
+  
 
 ENTRY(ResetISR)
 
@@ -39,11 +60,7 @@ SECTIONS
         *(.after_vectors*)
 
         /* Kinetis Flash Configuration data */
-        . = 0x400 ;
-        PROVIDE(__FLASH_CONFIG_START__ = .) ;
-        KEEP(*(.FlashConfig))
-        PROVIDE(__FLASH_CONFIG_END__ = .) ;
-        ASSERT(!(__FLASH_CONFIG_START__ == __FLASH_CONFIG_END__), "Linker Flash Config Support Enabled, but no .FlashConfig section provided within application");
+        
         /* End of Kinetis Flash Configuration data */
         
        *(.text*)

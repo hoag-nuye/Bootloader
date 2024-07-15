@@ -28,6 +28,7 @@ typedef enum{
 	SREC_ERR_CHECKSUM = 0x06,
 	SREC_EMPTY = 0x07,
 	SREC_ERR_STORAGE = 0x08,
+	SREC_IGNORE_DATA = 0x09,
 }SREC_Status_t;
 
 typedef enum{
@@ -60,6 +61,8 @@ typedef enum{
 typedef struct{
 	uint32_t srec_addr;
 	uint8_t srec_data[SREC_DATA_LEN_MAX/2];
+	uint8_t srec_addr_len;
+	uint8_t srec_data_len;
 	SREC_Status_t status;
 }SREC_API_t;
 

@@ -11,7 +11,8 @@ middleware/updateflash.o middleware/updateflash.d: \
  F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/uart0.h \
  F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/clock.h \
  F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports/queue.h \
- F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports/srecfile.h
+ F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports/srecfile.h \
+ F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/ftfa.h
 ../middleware/usb.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS/MKL46Z4.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS/core_cm0plus.h:
@@ -25,3 +26,4 @@ F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/uart0.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/clock.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports/queue.h:
 F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports/srecfile.h:
+F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers/ftfa.h:

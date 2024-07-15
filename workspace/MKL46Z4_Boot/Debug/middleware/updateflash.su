@@ -1,1 +1,4 @@
-../middleware/updateflash.c:34:6:FLASH_TransmitALineSrec	16	static
+../middleware/updateflash.c:18:13:FLASH_ProgarmWord	24	static
+../middleware/updateflash.c:31:6:FLASH_SrecLineValidate	16	static
+../middleware/updateflash.c:48:6:FLASH_TransmitALineSrec	16	static
+../middleware/updateflash.c:68:6:FLASH_TransmitTEST	32	static
