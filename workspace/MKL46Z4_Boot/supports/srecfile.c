@@ -193,6 +193,9 @@ SREC_API_t *SREC_ApiGetData(uint8_t *srecLineData, uint8_t sizeData, uint8_t chr
 	if(!((srecLineData[1] == '1') || (srecLineData[1] == '2') || (srecLineData[1] == '3'))){
 		status = SREC_IGNORE_DATA;
 		}
+	if((srecLineData[1] == '7') || (srecLineData[1] == '8') || (srecLineData[1] == '9')){
+		status = SREC_Termination_DATA;
+	}
 	apiResult.status = status;
 	return &apiResult;
 }

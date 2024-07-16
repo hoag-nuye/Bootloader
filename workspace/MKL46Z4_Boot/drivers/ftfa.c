@@ -32,26 +32,26 @@ void FTFA_ProgramWord(uint32_t address, uint32_t data){
     uint8_t FCCOB7 = (uint8_t)(data>>24);        //LSB
 
 
-    /*PROGRAM FLASH*/
-    // Wait FTFA FCCOB Availability Check = 1
-    while (!(FTFA->FSTAT & FTFA_FSTAT_CCIF_MASK));
-    // Clear the old errors
-    FTFA->FSTAT = FTFA_FSTAT_RDCOLERR_MASK | FTFA_FSTAT_ACCERR_MASK | FTFA_FSTAT_FPVIOL_MASK;
-    // Write to the FCCOB registers to load the required command parameter.
-    FTFA->FCCOB0 = 0x06;
-    // Address parameter
-    FTFA->FCCOB1 = FCCOB1;
-    FTFA->FCCOB2 = FCCOB2;
-    FTFA->FCCOB3 = FCCOB3;
-    // Data parameter
-    FTFA->FCCOB4 = FCCOB4;
-    FTFA->FCCOB5 = FCCOB5;
-    FTFA->FCCOB6 = FCCOB6;
-    FTFA->FCCOB7 = FCCOB7;
-    // Clear the CCIF to launch the command
-    FTFA->FSTAT = FTFA_FSTAT_CCIF_MASK;
-    // Wait FTFA FCCOB Availability Check = 1
-    while (!(FTFA->FSTAT & FTFA_FSTAT_CCIF_MASK));
+//    /*PROGRAM FLASH*/
+//    // Wait FTFA FCCOB Availability Check = 1
+//    while (!(FTFA->FSTAT & FTFA_FSTAT_CCIF_MASK));
+//    // Clear the old errors
+//    FTFA->FSTAT = FTFA_FSTAT_RDCOLERR_MASK | FTFA_FSTAT_ACCERR_MASK | FTFA_FSTAT_FPVIOL_MASK;
+//    // Write to the FCCOB registers to load the required command parameter.
+//    FTFA->FCCOB0 = 0x06;
+//    // Address parameter
+//    FTFA->FCCOB1 = FCCOB1;
+//    FTFA->FCCOB2 = FCCOB2;
+//    FTFA->FCCOB3 = FCCOB3;
+//    // Data parameter
+//    FTFA->FCCOB4 = FCCOB4;
+//    FTFA->FCCOB5 = FCCOB5;
+//    FTFA->FCCOB6 = FCCOB6;
+//    FTFA->FCCOB7 = FCCOB7;
+//    // Clear the CCIF to launch the command
+//    FTFA->FSTAT = FTFA_FSTAT_CCIF_MASK;
+//    // Wait FTFA FCCOB Availability Check = 1
+//    while (!(FTFA->FSTAT & FTFA_FSTAT_CCIF_MASK));
 }
 
 //COPY OF PRO-Master.DO XUAN DUC :))

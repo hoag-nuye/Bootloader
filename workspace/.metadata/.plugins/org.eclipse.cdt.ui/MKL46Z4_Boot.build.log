@@ -1,11 +1,36 @@
-19:03:42 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+15:32:55 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
-make[1]: Nothing to be done for 'main-build'.
+Building file: ../middleware/updateflash.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+../middleware/updateflash.c: In function 'FLASH_LOAD_USB2FLASH':
+../middleware/updateflash.c:58:43: warning: implicit declaration of function 'QUEUE_Get'; did you mean 'QUEUE_Pop'? [-Wimplicit-function-declaration]
+   58 |                         data = (uint8_t *)QUEUE_Get(2);
+      |                                           ^~~~~~~~~
+      |                                           QUEUE_Pop
+../middleware/updateflash.c: In function 'FLASH_TransmitALineSrec':
+../middleware/updateflash.c:101:21: warning: unused variable 'srecStatus' [-Wunused-variable]
+  101 |         SREC_API_t *srecStatus;
+      |                     ^~~~~~~~~~
+../middleware/updateflash.c: In function 'FLASH_LOAD_USB2FLASH':
+../middleware/updateflash.c:94:1: warning: control reaches end of non-void function [-Wreturn-type]
+   94 | }
+      | ^
+Finished building: ../middleware/updateflash.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:       11032 B       256 KB      4.21%
+            SRAM:        4636 B        32 KB     14.15%
+Finished building target: MKL46Z4_Boot.axf
+ 
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-  10752	      0	   4636	  15388	   3c1c	MKL46Z4_Boot.axf
+  11032	      0	   4636	  15668	   3d34	MKL46Z4_Boot.axf
  
 
-19:03:42 Build Finished. 0 errors, 0 warnings. (took 191ms)
+15:32:56 Build Finished. 0 errors, 3 warnings. (took 496ms)
 

@@ -8,6 +8,14 @@
 
 
 //------------- Enum -----------//
+typedef enum{
+	FLASH_LOAD_Blocked,
+	FLASH_LOAD_Unlock,
+	FLASH_LOAD_Loading,
+	FLASH_LOAD_Done,
+	FLASH_LOAD_Discontinuous,
+	FLASH_LOAD_DataError,
+}FLASH_LOAD_Status_t;
 //Define value of fields
 //------------- Struct -----------//
 //================ SUPPORT ================/
@@ -16,5 +24,5 @@
 void FLASH_TransmitTEST();
 //void USB_Receive_Data();
 //void USB_Transmit_Data();
-// Configuration control port
+FLASH_LOAD_Status_t FLASH_LOAD_USB2FLASH();
 #endif

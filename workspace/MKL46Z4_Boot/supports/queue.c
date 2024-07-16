@@ -69,6 +69,20 @@ uint8_t *QUEUE_Pop(){
 	return (uint8_t *)pData;
 }
 
+uint8_t *QUEUE_Get(uint8_t index){
+	uint8_t idx;
+	uint8_t *pData;
+	node_t *preNode = HEAD;
+
+	for(uint8_t idx = 0; idx<index; idx++){
+		if(preNode!= NULL){
+			pData = preNode->data;
+			preNode = preNode->pNext;
+		}
+	}
+
+	return (uint8_t *)pData;
+}
 
 
 

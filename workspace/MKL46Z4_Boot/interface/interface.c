@@ -14,8 +14,11 @@
 void Bootloader_Init(){
 	USB_Init();
 	USB_SetupComms();
+
+	FLASH_LOAD_Status_t FL_Status = FLASH_LOAD_USB2FLASH();
+
+
 //	FTFA_EraseSector(0x10000);
-	FLASH_SrecLineValidate();
 //	FLASH_TransmitALineSrec();
 //	FLASH_TransmitTEST();
 };
