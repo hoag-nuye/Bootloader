@@ -1,6 +1,0 @@
-"Task Aware Debugger for GDB" version 11.9.1 (202403060848)
-Copyright 2016-2023 NXP
-==================================
-15:00:34.682 INFO: [ZephyrRTOS] .config file could not be read [F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\Debug\.config (The system cannot find the file specified)]
-15:00:34.682 INFO: [TadModel] DSF session ID 0 has started.
-15:00:52.685 INFO: [TadModel] DSF session ID 0 has ended.

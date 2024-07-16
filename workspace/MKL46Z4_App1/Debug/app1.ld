@@ -17,7 +17,7 @@ GROUP (
 MEMORY
 {
   /* Define each memory region */
-  PROGRAM_FLASH (rx) : ORIGIN = 0x10000, LENGTH = 0x30000 /* 256K bytes (alias Flash) */  
+  PROGRAM_FLASH (rx) : ORIGIN = 0x20000, LENGTH = 0x20000 /* 256K bytes (alias Flash) */  
   SRAM (rwx) : ORIGIN = 0x1fffe000, LENGTH = 0x8000 /* 32K bytes (alias RAM) */  
 }
 

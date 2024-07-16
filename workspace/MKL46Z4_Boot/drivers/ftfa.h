@@ -15,5 +15,6 @@
 //================ FOCUSED ================/
 void FTFA_ProgramWord(uint32_t address, uint32_t data);
 void FTFA_EraseSector(uint32_t address);
+void FTFA_EraseMultiSector(uint32_t addrStart, uint32_t addrEnd);
 // Configuration control port
 #endif

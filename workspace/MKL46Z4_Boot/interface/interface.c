@@ -5,6 +5,7 @@
 #include "interface.h"
 #include "uart0.h"
 #include "ftfa.h"
+#include "config.h"
 //================ DEFINED ================/
 //Get Clock From IR Clock
 
@@ -15,10 +16,18 @@ void Bootloader_Init(){
 	USB_Init();
 	USB_SetupComms();
 
-	FLASH_LOAD_Status_t FL_Status = FLASH_LOAD_USB2FLASH();
+//	FTFA_EraseSector(FLASH_ADDRESS_APP1_LSB);
 
+/*DONE LOAD*/
+//	FTFA_EraseMultiSector(FLASH_ADDRESS_APP1_LSB, FLASH_ADDRESS_APP1_MSB);
+//	FLASH_LOAD_API_t *FLApi = FLASH_LOAD_USB2FLASH();
+/***********/
 
-//	FTFA_EraseSector(0x10000);
+/*JUMP APP*/
+
+/***********/
+
+//	FTFA_EraseMultiSector();
 //	FLASH_TransmitALineSrec();
 //	FLASH_TransmitTEST();
 };

@@ -10,7 +10,8 @@
 
 #include <stdint.h>
 //================ DEFINED ================/
-#define FLASH_ADDRESS_APP1 (uint32_t)0x10000
+#define FLASH_ADDRESS_APP1_LSB (uint32_t)0x20000
+#define FLASH_ADDRESS_APP1_MSB (uint32_t)0x40000
 
 #endif /* CONFIG_H_ */
 

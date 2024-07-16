@@ -30,6 +30,7 @@ typedef enum{
 	SREC_ERR_STORAGE = 0x08,
 	SREC_IGNORE_DATA = 0x09,
 	SREC_Termination_DATA = 0x10,
+	SREC_Header_DATA = 0x11
 }SREC_Status_t;
 
 typedef enum{

@@ -1,152 +1,15 @@
-15:41:31 **** Build of configuration Debug for project MKL46Z4_App1 ****
+23:29:25 **** Build of configuration Debug for project MKL46Z4_App1 ****
 make -r -j8 all 
 srec-build
 arm-none-eabi-objcopy -O srec example.axf example.bin
 arm-none-eabi-objcopy: 'example.axf': No such file
 make[1]: [makefile:60: pre-build] Error 1 (ignored)
  
-Building file: ../startup/startup_mkl46z4.c
-Building file: ../source/MKL46Z4_LightSensor.c
-Building file: ../source/mtb.c
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../startup/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"startup/startup_mkl46z4.d" -MT"startup/startup_mkl46z4.o" -MT"startup/startup_mkl46z4.d" -o "startup/startup_mkl46z4.o" "../startup/startup_mkl46z4.c"
-Building file: ../middleware/button.c
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/MKL46Z4_LightSensor.d" -MT"source/MKL46Z4_LightSensor.o" -MT"source/MKL46Z4_LightSensor.d" -o "source/MKL46Z4_LightSensor.o" "../source/MKL46Z4_LightSensor.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../source/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"source/mtb.d" -MT"source/mtb.o" -MT"source/mtb.d" -o "source/mtb.o" "../source/mtb.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/button.d" -MT"middleware/button.o" -MT"middleware/button.d" -o "middleware/button.o" "../middleware/button.c"
-Building file: ../middleware/led.c
-Building file: ../middleware/lightsensor.c
-Invoking: MCU C Compiler
-Building file: ../middleware/usb.c
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/led.d" -MT"middleware/led.o" -MT"middleware/led.d" -o "middleware/led.o" "../middleware/led.c"
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/lightsensor.d" -MT"middleware/lightsensor.o" -MT"middleware/lightsensor.d" -o "middleware/lightsensor.o" "../middleware/lightsensor.c"
-Building file: ../interface/interface.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
-../source/MKL46Z4_LightSensor.c: In function 'main':
-../source/MKL46Z4_LightSensor.c:29:25: warning: implicit declaration of function 'App_Sleep' [-Wimplicit-function-declaration]
-   29 |                         App_Sleep();
-      |                         ^~~~~~~~~
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../interface/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"interface/interface.d" -MT"interface/interface.o" -MT"interface/interface.d" -o "interface/interface.o" "../interface/interface.c"
-../middleware/led.c: In function 'Config_PTE29_PWM_Pin':
-../middleware/led.c:80:26: warning: passing argument 1 of 'LIGHTSENSOR_Read' from incompatible pointer type [-Wincompatible-pointer-types]
-   80 |         LIGHTSENSOR_Read(GetDataLightSensor);
-      |                          ^~~~~~~~~~~~~~~~~~
-      |                          |
-      |                          void (*)(uint16_t) {aka void (*)(short unsigned int)}
-In file included from ../middleware/led.c:10:
-../middleware/lightsensor.h:26:44: note: expected 'Handle_LightSensor_t' {aka 'void (*)(unsigned int)'} but argument is of type 'void (*)(uint16_t)' {aka 'void (*)(short unsigned int)'}
-   26 | void LIGHTSENSOR_Read(Handle_LightSensor_t handle_LightSensorValue );
-      |                       ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
-Finished building: ../middleware/button.c
-Finished building: ../source/MKL46Z4_LightSensor.c
- 
- 
-../interface/interface.c: In function 'BUTTON_LED':
-../interface/interface.c:91:17: warning: enumeration value 'MACHINE_LIGHT_SENSOR_LED' not handled in switch [-Wswitch]
-   91 |                 switch (state){
-      |                 ^~~~~~
-../interface/interface.c:91:17: warning: enumeration value 'MACHINE_LIGHR_SENSOR_UART' not handled in switch [-Wswitch]
-../interface/interface.c: In function 'LIGHTSENSOR_LED':
-../interface/interface.c:117:17: warning: enumeration value 'MACHINE_TOGGLE_LED' not handled in switch [-Wswitch]
-  117 |                 switch (state){
-      |                 ^~~~~~
-../interface/interface.c:117:17: warning: enumeration value 'MACHINE_LIGHR_SENSOR_UART' not handled in switch [-Wswitch]
-../interface/interface.c: In function 'LIGHTSENSOR_USB_COMMS':
-../interface/interface.c:148:17: warning: enumeration value 'MACHINE_TOGGLE_LED' not handled in switch [-Wswitch]
-  148 |                 switch (state){
-      |                 ^~~~~~
-../interface/interface.c:148:17: warning: enumeration value 'MACHINE_LIGHT_SENSOR_LED' not handled in switch [-Wswitch]
-Finished building: ../source/mtb.c
-Building file: ../drivers/adc.c
-Building file: ../drivers/clock.c
- 
-Finished building: ../startup/startup_mkl46z4.c
-Invoking: MCU C Compiler
- 
-Invoking: MCU C Compiler
-Finished building: ../middleware/lightsensor.c
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/clock.d" -MT"drivers/clock.o" -MT"drivers/clock.d" -o "drivers/clock.o" "../drivers/clock.c"
-Finished building: ../middleware/usb.c
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/adc.d" -MT"drivers/adc.o" -MT"drivers/adc.d" -o "drivers/adc.o" "../drivers/adc.c"
-Finished building: ../middleware/led.c
- 
- 
- 
-Building file: ../drivers/gpio.c
-Building file: ../drivers/mdl2mdl.c
-Building file: ../drivers/driverLib.c
-Building file: ../drivers/nvic.c
-Building file: ../drivers/pit.c
-Invoking: MCU C Compiler
-Finished building: ../interface/interface.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/gpio.d" -MT"drivers/gpio.o" -MT"drivers/gpio.d" -o "drivers/gpio.o" "../drivers/gpio.c"
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/driverLib.d" -MT"drivers/driverLib.o" -MT"drivers/driverLib.d" -o "drivers/driverLib.o" "../drivers/driverLib.c"
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/mdl2mdl.d" -MT"drivers/mdl2mdl.o" -MT"drivers/mdl2mdl.d" -o "drivers/mdl2mdl.o" "../drivers/mdl2mdl.c"
- 
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/nvic.d" -MT"drivers/nvic.o" -MT"drivers/nvic.d" -o "drivers/nvic.o" "../drivers/nvic.c"
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/pit.d" -MT"drivers/pit.o" -MT"drivers/pit.d" -o "drivers/pit.o" "../drivers/pit.c"
-Building file: ../drivers/port.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/port.d" -MT"drivers/port.o" -MT"drivers/port.d" -o "drivers/port.o" "../drivers/port.c"
-../drivers/mdl2mdl.c:9:1: warning: return type defaults to 'int' [-Wimplicit-int]
-    9 | M2M_Interconnects(M2M_Peripheral_t joinWhich){
-      | ^~~~~~~~~~~~~~~~~
-../drivers/mdl2mdl.c:9:1: warning: conflicting types for 'M2M_Interconnects'
-In file included from ../drivers/mdl2mdl.c:2:
-../drivers/mdl2mdl.h:24:6: note: previous declaration of 'M2M_Interconnects' with type 'void(M2M_Peripheral_t)'
-   24 | void M2M_Interconnects(M2M_Peripheral_t joinWhich);
-      |      ^~~~~~~~~~~~~~~~~
-Finished building: ../drivers/clock.c
-Finished building: ../drivers/adc.c
- 
- 
-Building file: ../drivers/systick.c
-Building file: ../drivers/tpm.c
-Finished building: ../drivers/gpio.c
-Finished building: ../drivers/driverLib.c
-Finished building: ../drivers/mdl2mdl.c
-Finished building: ../drivers/nvic.c
-Invoking: MCU C Compiler
-Invoking: MCU C Compiler
- 
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/systick.d" -MT"drivers/systick.o" -MT"drivers/systick.d" -o "drivers/systick.o" "../drivers/systick.c"
- 
- 
- 
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/tpm.d" -MT"drivers/tpm.o" -MT"drivers/tpm.d" -o "drivers/tpm.o" "../drivers/tpm.c"
-Finished building: ../drivers/pit.c
-Building file: ../drivers/uart0.c
- 
-Building file: ../CMSIS/system_MKL46Z4.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../drivers/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"drivers/uart0.d" -MT"drivers/uart0.o" -MT"drivers/uart0.d" -o "drivers/uart0.o" "../drivers/uart0.c"
-Finished building: ../drivers/port.c
-Invoking: MCU C Compiler
-arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_App1\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../CMSIS/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"CMSIS/system_MKL46Z4.d" -MT"CMSIS/system_MKL46Z4.o" -MT"CMSIS/system_MKL46Z4.d" -o "CMSIS/system_MKL46Z4.o" "../CMSIS/system_MKL46Z4.c"
- 
-Finished building: ../drivers/tpm.c
-Finished building: ../drivers/systick.c
- 
-Finished building: ../drivers/uart0.c
- 
- 
-Finished building: ../CMSIS/system_MKL46Z4.c
- 
 Building target: MKL46Z4_App1.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_App1.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T app1.ld -L F:/KL46Project/MKL46Z4_BootLoader/workspace/MKL46Z4_App1/Debug -o "MKL46Z4_App1.axf" ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/button.o ./middleware/led.o ./middleware/lightsensor.o ./middleware/usb.o  ./interface/interface.o  ./drivers/adc.o ./drivers/clock.o ./drivers/driverLib.o ./drivers/gpio.o ./drivers/mdl2mdl.o ./drivers/nvic.o ./drivers/pit.o ./drivers/port.o ./drivers/systick.o ./drivers/tpm.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:       10288 B       192 KB      5.23%
+   PROGRAM_FLASH:       10288 B       128 KB      7.85%
             SRAM:        4432 B        32 KB     13.53%
 Finished building target: MKL46Z4_App1.axf
  
@@ -156,5 +19,5 @@ arm-none-eabi-size "MKL46Z4_App1.axf"; # arm-none-eabi-objcopy -v -O binary "MKL
   10280	      8	   4424	  14712	   3978	MKL46Z4_App1.axf
  
 
-15:41:32 Build Finished. 0 errors, 10 warnings. (took 1s.660ms)
+23:29:26 Build Finished. 0 errors, 0 warnings. (took 400ms)
 

@@ -11,7 +11,7 @@
 #define NULL ((void *)0)
 static uint8_t lineSrecData[SREC_LINE_LEN_MAX];
 static uint8_t numberChar = 0;
-static uint8_t numberData = 0;
+static uint32_t numberData = 0;
 //================ SUPPORT ================/
 void UART0_IRQHandler(){
 	lineSrecData[numberChar] = UART0_RECEIVER_Data();
@@ -66,7 +66,7 @@ void USB_SetupComms(){
 	QUEUE_Init(sizeof(lineSrecData));
 }
 
-uint8_t USB_GetNumberLineSREC(){
+uint32_t USB_GetNumberLineSREC(){
 	return numberData;
 }
 

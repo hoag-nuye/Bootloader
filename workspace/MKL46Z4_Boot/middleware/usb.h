@@ -15,7 +15,7 @@
 //================ FOCUSED ================/
 void USB_Init();
 void USB_SetupComms();
-uint8_t USB_GetNumberLineSREC();
+uint32_t USB_GetNumberLineSREC();
 //void USB_Receive_Data();
 //void USB_Transmit_Data();
 // Configuration control port

@@ -190,15 +190,19 @@ SREC_API_t *SREC_ApiGetData(uint8_t *srecLineData, uint8_t sizeData, uint8_t chr
 				break;
 		}
 	}
-	if(!((srecLineData[1] == '1') || (srecLineData[1] == '2') || (srecLineData[1] == '3'))){
+	if((srecLineData[1] == '4') || (srecLineData[1] == '5') || (srecLineData[1] == '6')){
 		status = SREC_IGNORE_DATA;
 		}
 	if((srecLineData[1] == '7') || (srecLineData[1] == '8') || (srecLineData[1] == '9')){
 		status = SREC_Termination_DATA;
 	}
+	if(srecLineData[1] == '0'){
+		status = SREC_Header_DATA;
+	}
 	apiResult.status = status;
 	return &apiResult;
 }
+
 
 
 
