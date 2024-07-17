@@ -10,7 +10,7 @@
 //Define value of fields
 //------------- Struct -----------//
 typedef struct{
-	uint16_t baudrate;
+	uint32_t baudrate;
 	uint8_t samplingRatio;
 }UART0_Config_t;
 //================ SUPPORT ================/

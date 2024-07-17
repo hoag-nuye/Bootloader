@@ -16,6 +16,7 @@
 void USB_Init();
 void USB_SetupComms();
 uint32_t USB_GetNumberLineSREC();
+void USB_Disconnect();
 //void USB_Receive_Data();
 //void USB_Transmit_Data();
 // Configuration control port

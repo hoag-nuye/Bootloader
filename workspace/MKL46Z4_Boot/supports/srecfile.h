@@ -63,7 +63,6 @@ typedef enum{
 typedef struct{
 	uint32_t srec_addr;
 	uint8_t srec_data[SREC_DATA_LEN_MAX/2];
-	uint8_t srec_addr_len;
 	uint8_t srec_data_len;
 	SREC_Status_t status;
 }SREC_API_t;

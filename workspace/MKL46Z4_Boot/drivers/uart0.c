@@ -9,21 +9,34 @@
 
 //================ FOCUSED ================/
 void UART0_Config(UART0_Config_t* uart0_config){
+	//FLL Source
+	SystemCoreClockUpdate();
+	uint32_t uart0_clk_khz = SystemCoreClock;
+	uint16_t sbr = (uint32_t)((uart0_clk_khz) / (uart0_config->baudrate * (uart0_config->samplingRatio)));
+
+
+//	//Internal Clock source
+//	uint16_t sbr = (uint32_t)(CLK_UART0_IR / (uart0_config->baudrate * (uart0_config->samplingRatio+1)));
 	//Disable UART
 	 UART0->C2 &= ~(UART_C2_TE_MASK | UART_C2_RE_MASK);
 	/*Update over sampling ratio */
-	UART0->C4 = (UART0->C4 & (~UART0_C4_OSR_MASK)) | ((uint8_t)uart0_config->samplingRatio-1);
-	//SETUP BAUD RATE DIVISOR
-	uint16_t brDiv = (uint32_t)CLK_UART0_IR/((uart0_config->samplingRatio)*uart0_config->baudrate);
+	UART0->C4 = (UART0->C4 & (~UART0_C4_OSR_MASK)) | ((uint8_t)uart0_config->samplingRatio);
 
-	uint8_t brDivHigh = brDiv>>8;
-	uint8_t brDivLow = (uint8_t)brDiv;
+//	//SETUP BAUD RATE DIVISOR
+//	uint16_t brDiv = (uint32_t)CLK_UART0_IR/((uart0_config->samplingRatio)*uart0_config->baudrate);
+//
+//	uint8_t brDivHigh = brDiv>>8;
+//	uint8_t brDivLow = (uint8_t)brDiv;
+//
+//	UART0->BDH &= ~UART0_BDH_SBR_MASK;
+//	UART0->BDH |= UART0_BDH_SBR(brDivHigh);
+//
+//	UART0->BDL &= ~UART0_BDL_SBR_MASK;
+//	UART0->BDL |= UART0_BDL_SBR(brDivLow);
 
-	UART0->BDH &= ~UART0_BDH_SBR_MASK;
-	UART0->BDH |= UART0_BDH_SBR(brDivHigh);
-
-	UART0->BDL &= ~UART0_BDL_SBR_MASK;
-	UART0->BDL |= UART0_BDL_SBR(brDivLow);
+	// Configure baud rate
+	UART0->BDH = (sbr >> 8) & UART0_BDH_SBR_MASK;
+	UART0->BDL = sbr & UART0_BDL_SBR_MASK;
 
 
 };

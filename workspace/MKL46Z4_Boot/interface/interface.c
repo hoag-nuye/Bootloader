@@ -21,6 +21,8 @@ void Bootloader(){
 /*DONE LOAD*/
 //	FTFA_EraseMultiSector(FLASH_ADDRESS_APP1_LSB, FLASH_ADDRESS_APP1_MSB);
 //	FLASH_LOAD_API_t *FLApi = FLASH_LOAD_USB2FLASH();
+
+	USB_Disconnect();
 /***********/
 
 /*JUMP APP*/

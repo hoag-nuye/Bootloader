@@ -9,25 +9,16 @@
 #include "srecfile.h"
 //================ DEFINED ================/
 #define NULL ((void *)0)
-static uint8_t lineSrecData[SREC_LINE_LEN_MAX];
-static uint8_t numberChar = 0;
-static uint32_t numberData = 0;
 //================ SUPPORT ================/
-void UART0_IRQHandler(){
-	lineSrecData[numberChar] = UART0_RECEIVER_Data();
 
-	if((lineSrecData[numberChar] == '\n') && (lineSrecData[numberChar-1] == '\r')){
-		numberData++;
-		numberChar = 0;
-		QUEUE_Push(lineSrecData);
-	}else{
-		numberChar++;
-	}
-};
+
+//================ SUPPORT ================/
+
 //================ FOCUSED ================/
 void USB_Init(){
 	//CONFIG USB PIN TO PTA1 - PTA2
 	//Enable clock PORTA
+
 	Clock_Enable(CLK_PORTA);
 	/*PTA1 */
 	PORT_Config_Type portConfig_PTA1 = {
@@ -54,20 +45,33 @@ void USB_Init(){
 
 	//Configuration UART0
 	UART0_Config_t uart0_config = {
-		.baudrate = 9600,
+		.baudrate = 56000,
 		.samplingRatio = 16,
 	};
 	UART0_Config(&uart0_config);
 };
 
+//void USB_SetupComms(){
+//	UART0_RECEIVER_Enable();
+//	UART0_TRANSMIT_Enable();
+//}
+
+
+/*===========HEAP ISSUE =============*/
 void USB_SetupComms(){
+	QUEUE_Init(SREC_LINE_LEN_MAX);
 	UART0_RECEIVER_Enable();
 	UART0_TRANSMIT_Enable();
-	QUEUE_Init(sizeof(lineSrecData));
 }
 
-uint32_t USB_GetNumberLineSREC(){
-	return numberData;
+/*======================================*/
+
+USB_Disconnect(){
+	UART0_RECEIVER_Disable();
+	UART0_TRANSMIT_Disable();
 }
+//uint32_t USB_GetNumberLineSREC(){
+//	return numberData;
+//}
 
 

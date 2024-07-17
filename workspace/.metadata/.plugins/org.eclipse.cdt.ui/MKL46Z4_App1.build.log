@@ -1,4 +1,4 @@
-23:29:25 **** Build of configuration Debug for project MKL46Z4_App1 ****
+15:36:33 **** Incremental Build of configuration Debug for project MKL46Z4_App1 ****
 make -r -j8 all 
 srec-build
 arm-none-eabi-objcopy -O srec example.axf example.bin
@@ -19,5 +19,5 @@ arm-none-eabi-size "MKL46Z4_App1.axf"; # arm-none-eabi-objcopy -v -O binary "MKL
   10280	      8	   4424	  14712	   3978	MKL46Z4_App1.axf
  
 
-23:29:26 Build Finished. 0 errors, 0 warnings. (took 400ms)
+15:36:33 Build Finished. 0 errors, 0 warnings. (took 693ms)
 

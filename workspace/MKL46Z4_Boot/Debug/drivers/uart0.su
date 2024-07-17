@@ -1,7 +1,7 @@
-../drivers/uart0.c:11:6:UART0_Config	32	static
-../drivers/uart0.c:30:6:UART0_TRANSMIT_Enable	8	static
-../drivers/uart0.c:36:6:UART0_TRANSMIT_Disable	8	static
-../drivers/uart0.c:40:6:UART0_TRANSMIT_Data	16	static
-../drivers/uart0.c:47:6:UART0_RECEIVER_Enable	8	static
-../drivers/uart0.c:54:6:UART0_RECEIVER_Disable	8	static
-../drivers/uart0.c:58:9:UART0_RECEIVER_Data	8	static
+../drivers/uart0.c:11:6:UART0_Config	24	static
+../drivers/uart0.c:43:6:UART0_TRANSMIT_Enable	8	static
+../drivers/uart0.c:49:6:UART0_TRANSMIT_Disable	8	static
+../drivers/uart0.c:53:6:UART0_TRANSMIT_Data	16	static
+../drivers/uart0.c:60:6:UART0_RECEIVER_Enable	8	static
+../drivers/uart0.c:67:6:UART0_RECEIVER_Disable	8	static
+../drivers/uart0.c:71:9:UART0_RECEIVER_Data	8	static

@@ -1,50 +1,580 @@
-12:40:28 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+00:10:59 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c:82:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   82 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:82:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+Finished building: ../middleware/usb.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        6512 B       256 KB      2.48%
+            SRAM:        4572 B        32 KB     13.95%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6508	      4	   4568	  11080	   2b48	MKL46Z4_Boot.axf
+ 
+00:11:03 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6508	      4	   4568	  11080	   2b48	MKL46Z4_Boot.axf
+ 
+00:11:04 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6508	      4	   4568	  11080	   2b48	MKL46Z4_Boot.axf
+ 
+00:12:01 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6508	      4	   4568	  11080	   2b48	MKL46Z4_Boot.axf
+ 
+00:12:02 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6508	      4	   4568	  11080	   2b48	MKL46Z4_Boot.axf
+ 
+00:12:54 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6508	      4	   4568	  11080	   2b48	MKL46Z4_Boot.axf
+ 
+00:12:55 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6508	      4	   4568	  11080	   2b48	MKL46Z4_Boot.axf
+ 
+00:13:53 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../interface/interface.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../interface/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"interface/interface.d" -MT"interface/interface.o" -MT"interface/interface.d" -o "interface/interface.o" "../interface/interface.c"
+../interface/interface.c: In function 'Bootloader':
+../interface/interface.c:23:27: warning: unused variable 'FLApi' [-Wunused-variable]
+   23 |         FLASH_LOAD_API_t *FLApi = FLASH_LOAD_USB2FLASH();
+      |                           ^~~~~
+Finished building: ../interface/interface.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        6452 B       256 KB      2.46%
+            SRAM:        4572 B        32 KB     13.95%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6448	      4	   4568	  11020	   2b0c	MKL46Z4_Boot.axf
+ 
+00:13:53 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6448	      4	   4568	  11020	   2b0c	MKL46Z4_Boot.axf
+ 
+00:16:17 **** Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 Building file: ../middleware/updateflash.c
 Invoking: MCU C Compiler
 arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
 ../middleware/updateflash.c: In function 'FLASH_LOAD_USB2FLASH':
-../middleware/updateflash.c:73:17: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
-   73 |                 free(data);
+../middleware/updateflash.c:280:17: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+  280 |                 free(data);
       |                 ^~~~
-../middleware/updateflash.c:14:1: note: 'free' is defined in header '<stdlib.h>'; did you forget to '#include <stdlib.h>'?
-   13 | #include "config.h"
+../middleware/updateflash.c:220:1: note: 'free' is defined in header '<stdlib.h>'; did you forget to '#include <stdlib.h>'?
+  219 | #include "config.h"
   +++ |+#include <stdlib.h>
-   14 | //================ DEFINED ================/
-../middleware/updateflash.c:87:43: warning: passing argument 1 of 'FLASH_ProgarmWord' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
-   87 |                         FLASH_ProgarmWord(&dataSREC_First);
+  220 | //================ DEFINED ================/
+../middleware/updateflash.c:294:43: warning: passing argument 1 of 'FLASH_ProgarmWord' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  294 |                         FLASH_ProgarmWord(&dataSREC_First);
       |                                           ^~~~~~~~~~~~~~~
-../middleware/updateflash.c:39:43: note: expected 'SREC_API_t *' but argument is of type 'volatile SREC_API_t *'
-   39 | static void FLASH_ProgarmWord(SREC_API_t *dataSREC){
+../middleware/updateflash.c:246:43: note: expected 'SREC_API_t *' but argument is of type 'volatile SREC_API_t *'
+  246 | static void FLASH_ProgarmWord(SREC_API_t *dataSREC){
       |                               ~~~~~~~~~~~~^~~~~~~~
+../middleware/updateflash.c: In function 'FLASH_TransmitTEST':
+../middleware/updateflash.c:345:49: warning: unused variable 'i' [-Wunused-variable]
+  345 |                                         uint8_t i;
+      |                                                 ^
 Finished building: ../middleware/updateflash.c
  
 Building target: MKL46Z4_Boot.axf
 Invoking: MCU Linker
 arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
 Memory region         Used Size  Region Size  %age Used
-   PROGRAM_FLASH:        4860 B       256 KB      1.85%
+   PROGRAM_FLASH:        6480 B       256 KB      2.47%
+            SRAM:        4572 B        32 KB     13.95%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6476	      4	   4568	  11048	   2b28	MKL46Z4_Boot.axf
+ 
+00:16:18 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6476	      4	   4568	  11048	   2b28	MKL46Z4_Boot.axf
+ 
+00:17:04 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6476	      4	   4568	  11048	   2b28	MKL46Z4_Boot.axf
+ 
+00:17:05 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6476	      4	   4568	  11048	   2b28	MKL46Z4_Boot.axf
+ 
+00:17:17 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6476	      4	   4568	  11048	   2b28	MKL46Z4_Boot.axf
+ 
+00:17:18 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   6476	      4	   4568	  11048	   2b28	MKL46Z4_Boot.axf
+ 
+00:19:08 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/updateflash.c
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/updateflash.c: In function 'FLASH_LOAD_USB2FLASH':
+../middleware/updateflash.c:296:17: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+  296 |                 free(data);
+      |                 ^~~~
+../middleware/updateflash.c:220:1: note: 'free' is defined in header '<stdlib.h>'; did you forget to '#include <stdlib.h>'?
+  219 | #include "config.h"
+  +++ |+#include <stdlib.h>
+  220 | //================ DEFINED ================/
+../middleware/updateflash.c:310:43: warning: passing argument 1 of 'FLASH_ProgarmWord' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  310 |                         FLASH_ProgarmWord(&dataSREC_First);
+      |                                           ^~~~~~~~~~~~~~~
+../middleware/updateflash.c:262:43: note: expected 'SREC_API_t *' but argument is of type 'volatile SREC_API_t *'
+  262 | static void FLASH_ProgarmWord(SREC_API_t *dataSREC){
+      |                               ~~~~~~~~~~~~^~~~~~~~
+../middleware/usb.c:69:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   69 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:69:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+../middleware/updateflash.c: In function 'FLASH_TransmitTEST':
+../middleware/updateflash.c:361:49: warning: unused variable 'i' [-Wunused-variable]
+  361 |                                         uint8_t i;
+      |                                                 ^
+Finished building: ../middleware/usb.c
+Finished building: ../middleware/updateflash.c
+ 
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7160 B       256 KB      2.73%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:19:09 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:21:46 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c:69:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   69 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:69:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+Finished building: ../middleware/usb.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7160 B       256 KB      2.73%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:21:47 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:22:38 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c:69:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   69 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:69:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+Finished building: ../middleware/usb.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7160 B       256 KB      2.73%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:22:38 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:23:30 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c:69:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   69 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:69:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+Finished building: ../middleware/usb.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7160 B       256 KB      2.73%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:23:31 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:24:11 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c:69:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   69 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:69:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+Finished building: ../middleware/usb.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7160 B       256 KB      2.73%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:24:12 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:25:33 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c:69:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   69 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:69:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+Finished building: ../middleware/usb.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7160 B       256 KB      2.73%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:25:34 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:26:21 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c:69:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   69 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:69:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+Finished building: ../middleware/usb.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7160 B       256 KB      2.73%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:26:22 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:28:49 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../middleware/updateflash.c
+Building file: ../middleware/usb.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/updateflash.d" -MT"middleware/updateflash.o" -MT"middleware/updateflash.d" -o "middleware/updateflash.o" "../middleware/updateflash.c"
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../middleware/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"middleware/usb.d" -MT"middleware/usb.o" -MT"middleware/usb.d" -o "middleware/usb.o" "../middleware/usb.c"
+../middleware/usb.c:69:1: warning: return type defaults to 'int' [-Wimplicit-int]
+   69 | USB_Disconnect(){
+      | ^~~~~~~~~~~~~~
+../middleware/usb.c:69:1: warning: conflicting types for 'USB_Disconnect'
+In file included from ../middleware/usb.c:2:
+../middleware/usb.h:19:6: note: previous declaration of 'USB_Disconnect' with type 'void()'
+   19 | void USB_Disconnect();
+      |      ^~~~~~~~~~~~~~
+../middleware/updateflash.c: In function 'FLASH_LOAD_USB2FLASH':
+../middleware/updateflash.c:296:17: warning: implicit declaration of function 'free' [-Wimplicit-function-declaration]
+  296 |                 free(data);
+      |                 ^~~~
+../middleware/updateflash.c:220:1: note: 'free' is defined in header '<stdlib.h>'; did you forget to '#include <stdlib.h>'?
+  219 | #include "config.h"
+  +++ |+#include <stdlib.h>
+  220 | //================ DEFINED ================/
+../middleware/updateflash.c:310:43: warning: passing argument 1 of 'FLASH_ProgarmWord' discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  310 |                         FLASH_ProgarmWord(&dataSREC_First);
+      |                                           ^~~~~~~~~~~~~~~
+../middleware/updateflash.c:262:43: note: expected 'SREC_API_t *' but argument is of type 'volatile SREC_API_t *'
+  262 | static void FLASH_ProgarmWord(SREC_API_t *dataSREC){
+      |                               ~~~~~~~~~~~~^~~~~~~~
+../middleware/updateflash.c: In function 'FLASH_TransmitTEST':
+../middleware/updateflash.c:361:49: warning: unused variable 'i' [-Wunused-variable]
+  361 |                                         uint8_t i;
+      |                                                 ^
+Finished building: ../middleware/usb.c
+ 
+Finished building: ../middleware/updateflash.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7160 B       256 KB      2.73%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:28:50 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7156	      4	   4676	  11836	   2e3c	MKL46Z4_Boot.axf
+ 
+00:30:56 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../interface/interface.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../interface/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"interface/interface.d" -MT"interface/interface.o" -MT"interface/interface.d" -o "interface/interface.o" "../interface/interface.c"
+../interface/interface.c: In function 'Bootloader':
+../interface/interface.c:23:27: warning: unused variable 'FLApi' [-Wunused-variable]
+   23 |         FLASH_LOAD_API_t *FLApi = FLASH_LOAD_USB2FLASH();
+      |                           ^~~~~
+Finished building: ../interface/interface.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        7220 B       256 KB      2.75%
+            SRAM:        4680 B        32 KB     14.28%
+Finished building target: MKL46Z4_Boot.axf
+ 
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7216	      4	   4676	  11896	   2e78	MKL46Z4_Boot.axf
+ 
+00:30:57 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+make[1]: Nothing to be done for 'main-build'.
+Performing post-build steps
+arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
+   text	   data	    bss	    dec	    hex	filename
+   7216	      4	   4676	  11896	   2e78	MKL46Z4_Boot.axf
+ 
+00:31:46 **** Build of configuration Debug for project MKL46Z4_Boot ****
+make -r -j8 all 
+Building file: ../interface/interface.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -D__REDLIB__ -DCPU_MKL46Z256VLL4_cm0plus -DCPU_MKL46Z256VLL4 -DFSL_RTOS_BM -DSDK_OS_BAREMETAL -DSDK_DEBUGCONSOLE=1 -DCR_INTEGER_PRINTF -DPRINTF_FLOAT_ENABLE=0 -D__MCUXPRESSO -D__USE_CMSIS -DDEBUG -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\supports" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\source" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\interface" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\middleware" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\drivers" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\CMSIS" -I"F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\startup" -O0 -fno-common -g3 -gdwarf-4 -Wall -c -ffunction-sections -fdata-sections -ffreestanding -fno-builtin -fmerge-constants -fmacro-prefix-map="../interface/"= -mcpu=cortex-m0plus -mthumb -D__REDLIB__ -fstack-usage -specs=redlib.specs -MMD -MP -MF"interface/interface.d" -MT"interface/interface.o" -MT"interface/interface.d" -o "interface/interface.o" "../interface/interface.c"
+Finished building: ../interface/interface.c
+ 
+Building target: MKL46Z4_Boot.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -Xlinker -Map="MKL46Z4_Boot.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m0plus -mthumb -T MKL46Z4_Boot_Debug.ld -o "MKL46Z4_Boot.axf" ./supports/queue.o ./supports/srecfile.o  ./startup/startup_mkl46z4.o  ./source/MKL46Z4_LightSensor.o ./source/mtb.o  ./middleware/updateflash.o ./middleware/usb.o  ./interface/interface.o  ./drivers/clock.o ./drivers/ftfa.o ./drivers/gpio.o ./drivers/nvic.o ./drivers/port.o ./drivers/systick.o ./drivers/uart0.o  ./CMSIS/system_MKL46Z4.o   
+Memory region         Used Size  Region Size  %age Used
+   PROGRAM_FLASH:        5364 B       256 KB      2.05%
             SRAM:        4536 B        32 KB     13.84%
 Finished building target: MKL46Z4_Boot.axf
  
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4860	      0	   4536	   9396	   24b4	MKL46Z4_Boot.axf
+   5360	      4	   4532	   9896	   26a8	MKL46Z4_Boot.axf
  
-12:40:33 **** Build of configuration Debug for project MKL46Z4_Boot ****
+00:31:47 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
 make -r -j8 all 
 make[1]: Nothing to be done for 'main-build'.
 Performing post-build steps
 arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
    text	   data	    bss	    dec	    hex	filename
-   4860	      0	   4536	   9396	   24b4	MKL46Z4_Boot.axf
- 
-12:40:34 **** Incremental Build of configuration Debug for project MKL46Z4_Boot ****
-make -r -j8 all 
-make[1]: Nothing to be done for 'main-build'.
-Performing post-build steps
-arm-none-eabi-size "MKL46Z4_Boot.axf"; # arm-none-eabi-objcopy -v -O binary "MKL46Z4_Boot.axf" "MKL46Z4_Boot.bin" ; # checksum -p MKL46Z256xxx4 -d "MKL46Z4_Boot.bin";
-   text	   data	    bss	    dec	    hex	filename
-   4860	      0	   4536	   9396	   24b4	MKL46Z4_Boot.axf
+   5360	      4	   4532	   9896	   26a8	MKL46Z4_Boot.axf
  
