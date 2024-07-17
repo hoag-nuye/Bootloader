@@ -12,7 +12,7 @@
 //================ SUPPORT ================/
 
 //================ FOCUSED ================/
-void Bootloader_Init(){
+void Bootloader(){
 	USB_Init();
 	USB_SetupComms();
 
@@ -24,7 +24,7 @@ void Bootloader_Init(){
 /***********/
 
 /*JUMP APP*/
-
+	FLASH_Jump2Firmware(FLASH_ADDRESS_APP1_LSB);
 /***********/
 
 //	FTFA_EraseMultiSector();

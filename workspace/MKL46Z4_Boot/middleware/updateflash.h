@@ -27,4 +27,5 @@ void FLASH_TransmitTEST();
 //void USB_Transmit_Data();
 FLASH_LOAD_API_t *FLASH_LOAD_USB2FLASH();
 uint8_t FLASH_CheckEmpty(uint32_t addr);
+void FLASH_Jump2Firmware(uint32_t addr);
 #endif

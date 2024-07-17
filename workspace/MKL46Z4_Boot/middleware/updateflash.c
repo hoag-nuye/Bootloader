@@ -13,9 +13,20 @@
 #include "config.h"
 //================ DEFINED ================/
 #define NULL ((void *)0)
-
+static uint32_t interruptState;
 static volatile SREC_API_t dataSREC_First;
 //================ SUPPORT ================/
+/* Disable all interrupts and save their state*/
+static void disableInterrupts(void) {
+    interruptState = __get_PRIMASK();
+    __disable_irq();
+}
+
+/* Enable interrupts based on saved state */
+static void enableInterrupts(void) {
+    __set_PRIMASK(interruptState);
+}
+
 /*Copy STRUCT*/
 static void Copy_Struct(uint8_t *dest, uint8_t *src , uint16_t size){
 	uint16_t idx;
@@ -147,4 +158,31 @@ uint8_t FLASH_CheckEmpty(uint32_t addr){
 		status = 1;
 	}
 	return status;
+}
+
+void FLASH_Jump2Firmware(uint32_t addr) {
+    typedef void (*pFunction)(void);
+    pFunction firmWare;
+    uint32_t fw_SP = *((volatile uint32_t *)addr);
+    uint32_t fw_PC = *((volatile uint32_t *)(addr + 4));
+
+    // Disable interrupts
+    disableInterrupts();
+
+    // Disable fault handlers
+    SCB->SHCSR &= ~((1 << 16) | (1 << 17) | (1 << 18));  // Disable UsageFault, BusFault, and MemManageFault
+
+    // Set the application stack pointer
+    __set_MSP(fw_SP);
+    SCB->VTOR = addr;
+
+    // Set the program counter to the application entry point
+    firmWare = (pFunction)fw_PC;
+
+    // Jump to the firmware
+    firmWare();
+
+    // Re-enable interrupts and fault handlers (based on previous state)
+    enableInterrupts();
+    SCB->SHCSR |= ((1 << 16) | (1 << 17) | (1 << 18));  // Enable UsageFault, BusFault, and MemManageFault
 }

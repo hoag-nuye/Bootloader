@@ -12,6 +12,6 @@
 
 //------------- Struct -----------//
 //================ SUPPORT ================/
-void Bootloader_Init();
+void Bootloader();
 //================ FOCUSED ================/
 #endif
