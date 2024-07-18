@@ -1,0 +1,7 @@
+../middleware/timer.c:22:6:TIMER_Init	16	static
+../middleware/timer.c:39:6:TIMER_WAIT_Sync	32	static
+../middleware/timer.c:49:6:TIMER_WAIT_Sync_Enable	8	static
+../middleware/timer.c:53:6:TIMER_WAIT_	16	static
+../middleware/timer.c:64:6:TIMER_COUNTDOWN_Async	16	static
+../middleware/timer.c:68:6:TIMER_COUNTDOWN_Async_Start	8	static
+../middleware/timer.c:72:6:TIMER_COUNTDOWN_Async_Stop	8	static

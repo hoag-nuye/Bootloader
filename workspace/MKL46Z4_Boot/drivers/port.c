@@ -44,4 +44,7 @@ Port_Interrupt_Flag_t PORT_Interrupt(PORT_Type* port, uint8_t pin){
 	return flag;
 };
 
+Port_Reset_Pin(PORT_Type* port, uint8_t pin){
+	port->PCR[pin] &= 0;
+}
 

@@ -1,0 +1,11 @@
+"Task Aware Debugger for GDB" version 11.9.1 (202403060848)
+Copyright 2016-2023 NXP
+==================================
+18:08:12.691 INFO: [ZephyrRTOS] .config file could not be read [F:\KL46Project\MKL46Z4_BootLoader\workspace\MKL46Z4_Boot\Debug\.config (The system cannot find the file specified)]
+18:08:12.691 INFO: [TadModel] DSF session ID 64 has started.
+18:08:15.332 INFO: [TadState] TAD state changed: DEBUG_STARTED -> DEBUG_INIT_0 (SUSPENDED, USER_REQUEST)
+18:08:15.851 INFO: [TadState] TAD state changed: DEBUG_INIT_0 -> DEBUG_INIT_1 (RESUMED, USER_REQUEST)
+18:08:15.864 INFO: [TadState] TAD state changed: DEBUG_INIT_1 -> DEBUG_SUSPENDED (SUSPENDED, BREAKPOINT)
+18:08:17.356 INFO: [TadState] TAD state changed: DEBUG_SUSPENDED -> DEBUG_RESUMED (RESUMED, USER_REQUEST)
+18:09:31.563 INFO: [TadState] TAD state changed: DEBUG_RESUMED -> READY (SUSPENDED, SIGNAL)
+18:09:35.107 INFO: [TadModel] DSF session ID 64 has ended.

@@ -20,5 +20,6 @@
  * @brief   Application entry point.
  */
 void main() {
+	Bootloader_Init();
 	Bootloader();
 }

@@ -1,1 +1,4 @@
-../interface/interface.c:15:6:Bootloader	8	static
+../interface/interface.c:16:13:handleButton	16	static
+../interface/interface.c:33:7:Bootloader_Init	8	static
+../interface/interface.c:45:6:BootLoader_End	8	static
+../interface/interface.c:49:6:Bootloader	16	static

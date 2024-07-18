@@ -4,14 +4,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../middleware/button.c \
+../middleware/led.c \
+../middleware/timer.c \
 ../middleware/updateflash.c \
 ../middleware/usb.c 
 
 C_DEPS += \
+./middleware/button.d \
+./middleware/led.d \
+./middleware/timer.d \
 ./middleware/updateflash.d \
 ./middleware/usb.d 
 
 OBJS += \
+./middleware/button.o \
+./middleware/led.o \
+./middleware/timer.o \
 ./middleware/updateflash.o \
 ./middleware/usb.o 
 
@@ -28,7 +37,7 @@ middleware/%.o: ../middleware/%.c middleware/subdir.mk
 clean: clean-middleware
 
 clean-middleware:
-	-$(RM) ./middleware/updateflash.d ./middleware/updateflash.o ./middleware/usb.d ./middleware/usb.o
+	-$(RM) ./middleware/button.d ./middleware/button.o ./middleware/led.d ./middleware/led.o ./middleware/timer.d ./middleware/timer.o ./middleware/updateflash.d ./middleware/updateflash.o ./middleware/usb.d ./middleware/usb.o
 
 .PHONY: clean-middleware
 

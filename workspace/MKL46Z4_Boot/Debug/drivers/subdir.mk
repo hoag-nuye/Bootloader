@@ -5,27 +5,33 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../drivers/clock.c \
+../drivers/driverLib.c \
 ../drivers/ftfa.c \
 ../drivers/gpio.c \
 ../drivers/nvic.c \
+../drivers/pit.c \
 ../drivers/port.c \
 ../drivers/systick.c \
 ../drivers/uart0.c 
 
 C_DEPS += \
 ./drivers/clock.d \
+./drivers/driverLib.d \
 ./drivers/ftfa.d \
 ./drivers/gpio.d \
 ./drivers/nvic.d \
+./drivers/pit.d \
 ./drivers/port.d \
 ./drivers/systick.d \
 ./drivers/uart0.d 
 
 OBJS += \
 ./drivers/clock.o \
+./drivers/driverLib.o \
 ./drivers/ftfa.o \
 ./drivers/gpio.o \
 ./drivers/nvic.o \
+./drivers/pit.o \
 ./drivers/port.o \
 ./drivers/systick.o \
 ./drivers/uart0.o 
@@ -43,7 +49,7 @@ drivers/%.o: ../drivers/%.c drivers/subdir.mk
 clean: clean-drivers
 
 clean-drivers:
-	-$(RM) ./drivers/clock.d ./drivers/clock.o ./drivers/ftfa.d ./drivers/ftfa.o ./drivers/gpio.d ./drivers/gpio.o ./drivers/nvic.d ./drivers/nvic.o ./drivers/port.d ./drivers/port.o ./drivers/systick.d ./drivers/systick.o ./drivers/uart0.d ./drivers/uart0.o
+	-$(RM) ./drivers/clock.d ./drivers/clock.o ./drivers/driverLib.d ./drivers/driverLib.o ./drivers/ftfa.d ./drivers/ftfa.o ./drivers/gpio.d ./drivers/gpio.o ./drivers/nvic.d ./drivers/nvic.o ./drivers/pit.d ./drivers/pit.o ./drivers/port.d ./drivers/port.o ./drivers/systick.d ./drivers/systick.o ./drivers/uart0.d ./drivers/uart0.o
 
 .PHONY: clean-drivers
 

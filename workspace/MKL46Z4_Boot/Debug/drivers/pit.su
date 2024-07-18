@@ -1,5 +1,7 @@
 ../drivers/pit.c:9:17:timeToReload	32	static
 ../drivers/pit.c:17:6:Pit_Config	16	static
-../drivers/pit.c:21:6:Pit_Timer_Reload	24	static
-../drivers/pit.c:26:6:Pit_Timer_Start	16	static
-../drivers/pit.c:30:6:Pit_Timer_Finish	16	static
+../drivers/pit.c:23:6:Pit_Timer_Interrupt_Enable	16	static
+../drivers/pit.c:28:6:Pit_Timer_Interrupt_Disable	16	static
+../drivers/pit.c:32:6:Pit_Timer_Reload	24	static
+../drivers/pit.c:37:6:Pit_Timer_Start	16	static
+../drivers/pit.c:41:6:Pit_Timer_Finish	16	static

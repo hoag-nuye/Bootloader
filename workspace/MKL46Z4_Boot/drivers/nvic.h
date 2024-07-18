@@ -12,7 +12,8 @@ typedef enum
 {
 	IR_PORTCD = 31U,
 	IR_ADC0 = 15U,
-	IR_UART0 = 12U
+	IR_UART0 = 12U,
+	IR_PIT = 22U,
 }IRQn_t;
 
 //------------- Struct -----------//

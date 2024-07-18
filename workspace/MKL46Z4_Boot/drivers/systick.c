@@ -19,11 +19,10 @@ void SysTick_Handle(Handle_SysInterrput_t _handle_interrupt){
 	handle_interrupt = _handle_interrupt;
 };
 
-void SysTick_Reload(uint16_t timeMs){
-	SystemCoreClockUpdate();
+void SysTick_Reload(uint32_t timeMs){
 	//Take cycle clock of processor
 	uint32_t coreClock = SystemCoreClock;//(MHZ)Clock in arm calculated HZ
-	uint32_t N_times = (uint32_t)timeMs * coreClock/1000;
+	uint32_t N_times = (uint32_t)timeMs * (coreClock/1000);
 	SysTick->LOAD &= ~SysTick_LOAD_RELOAD_Msk;
 	SysTick->LOAD |= N_times -1;
 

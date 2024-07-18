@@ -49,6 +49,13 @@ void USB_Init(){
 		.samplingRatio = 16,
 	};
 	UART0_Config(&uart0_config);
+
+	/*DISABLE INTERRUPT*/
+	//PORTC_D
+	NVIC_DisableIRQn(IR_PORTCD);
+	//PIT
+	NVIC_DisableIRQn(IR_PIT);
+
 };
 
 //void USB_SetupComms(){

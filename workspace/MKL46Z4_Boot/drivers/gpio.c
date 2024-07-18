@@ -19,7 +19,7 @@ void GPIO_SetPin(GPIO_Type* gpio, uint8_t pin){
 };
 GPIO_Data_t GPIO_ReadPin(GPIO_Type* gpio, uint8_t pin){
 	GPIO_Data_t data = GPIO_DATA_lowLOGIC;
-	if((gpio->PDDR & (GPIO_PDDR_PDD_SHIFT<<pin)) != data){
+	if((gpio->PDIR & (1<<pin)) != 0){
 		data = GPIO_DATA_highLOGIC;
 	}
 	return data;

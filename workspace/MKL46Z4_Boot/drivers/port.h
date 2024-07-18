@@ -29,6 +29,7 @@ typedef enum{
 typedef enum{
 	 Falling_Edge = 0b1010,
 	 Rising_Edge = 0b1001,
+	 Either_Edge = 0b1011
 }Port_Interrupt_t;
 
 typedef enum{

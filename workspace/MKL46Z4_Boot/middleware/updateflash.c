@@ -270,6 +270,16 @@ static void FLASH_ProgarmWord(SREC_API_t *dataSREC){
 	}
 //	FTFA_ProgramWord(uint32_t address, uint32_t data);
 }
+
+//Check flash empty
+static uint8_t FLASH_CheckEmpty(uint32_t addr){
+	uint8_t status = 0;
+	uint32_t *ptrAddr = (uint32_t *)addr;
+	if(*ptrAddr == 0xFFFFFFFF){
+		status = 1;
+	}
+	return status;
+}
 //================ FOCUSED ================/
 
 
@@ -326,6 +336,7 @@ FLASH_LOAD_API_t *FLASH_LOAD_USB2FLASH(){
 
 	}
 	}
+	UART0_RECEIVER_Disable();
 	return flashLoadAPI;
 }
 //TEST GET DATA FROM SREC LINE
@@ -370,16 +381,21 @@ void FLASH_TransmitTEST(){
 		}
 }
 
-uint8_t FLASH_CheckEmpty(uint32_t addr){
+
+
+uint8_t FLASH_CheckFirmwareEmpty(){
 	uint8_t status = 0;
-	uint32_t *ptrAddr = (uint32_t *)addr;
-	if(*ptrAddr == 0xFFFFFFFF){
+	if(FLASH_CheckEmpty(FLASH_ADDRESS_APP1_LSB)){
 		status = 1;
 	}
 	return status;
-}
+};
+uint8_t FLASH_CheckBackupEmpty(){
 
-void FLASH_Jump2Firmware(uint32_t addr) {
+};
+
+void FLASH_Jump2Firmware() {
+	uint32_t addr = FLASH_ADDRESS_APP1_LSB;
     typedef void (*pFunction)(void);
     pFunction firmWare;
     uint32_t fw_SP = *((volatile uint32_t *)addr);

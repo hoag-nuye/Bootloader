@@ -6,7 +6,6 @@
 //Get Clock From IR Clock
 
 //================ SUPPORT ================/
-
 //================ FOCUSED ================/
 void UART0_Config(UART0_Config_t* uart0_config){
 	//FLL Source

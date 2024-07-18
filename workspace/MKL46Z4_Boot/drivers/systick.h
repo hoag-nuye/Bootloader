@@ -33,7 +33,7 @@ typedef void (*Handle_SysInterrput_t)();
 // Configuration control port
 void SysTick_Init(SysTick_Config_Type SysTick_Config);
 void SysTick_Handle(Handle_SysInterrput_t handle_interrupt);
-void SysTick_Reload(uint16_t timeMs);
+void SysTick_Reload(uint32_t timeMs);
 void SysTick_Enable_Interrput();
 void SysTick_Disable_Interrput();
 void SysTick_Enable();

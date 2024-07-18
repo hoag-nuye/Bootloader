@@ -3,8 +3,10 @@
 ../middleware/updateflash.c:249:13:enableInterrupts	16	static
 ../middleware/updateflash.c:254:13:Copy_Struct	32	static
 ../middleware/updateflash.c:262:13:FLASH_ProgarmWord	32	static
-../middleware/updateflash.c:277:19:FLASH_LOAD_USB2FLASH	40	static
-../middleware/updateflash.c:332:6:FLASH_TransmitALineSrec	16	static
-../middleware/updateflash.c:351:6:FLASH_TransmitTEST	32	static
-../middleware/updateflash.c:373:9:FLASH_CheckEmpty	24	static
-../middleware/updateflash.c:382:6:FLASH_Jump2Firmware	32	static
+../middleware/updateflash.c:275:16:FLASH_CheckEmpty	24	static
+../middleware/updateflash.c:287:19:FLASH_LOAD_USB2FLASH	40	static
+../middleware/updateflash.c:343:6:FLASH_TransmitALineSrec	16	static
+../middleware/updateflash.c:362:6:FLASH_TransmitTEST	32	static
+../middleware/updateflash.c:386:9:FLASH_CheckFirmwareEmpty	16	static
+../middleware/updateflash.c:393:9:FLASH_CheckBackupEmpty	8	static
+../middleware/updateflash.c:397:6:FLASH_Jump2Firmware	32	static
